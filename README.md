@@ -1,3 +1,3 @@
-<h1>A react based calculator</h1>
+<h1>React.js Calculator Application </h1>
 
 <img src="src/Screenshot_1.png">
