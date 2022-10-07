@@ -1,0 +1,77 @@
+/** This is the CSS for the calculator.
+
+ Author: Jacob, Web Dev Simplified
+ */
+
+
+/* This is a CSS rule that applies to all elements, and their pseudo-elements. It
+sets the box-sizing property to border-box. This means that the width and
+height of an element will include any padding and border. */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Setting the background color and margin of the calculator. */
+body {
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+/* This is the CSS for the calculator. */
+.calculator-grid {
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+/* This is the CSS for the calculator. */
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+/* This is a CSS rule that applies to all buttons that are children of the
+element with the class calculator-grid. It sets the background-color property
+to
+rgba(255, 255, 255, .9) when the button is hovered over or focused. */
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+/* This is a CSS rule that applies to all elements with the class span-two. It
+sets the grid-column property to span 2. This means that the element will span
+two columns. */
+.span-two {
+    grid-column: span 2;
+}
+
+/* This is the CSS for the calculator. */
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Setting the color of the previous operand to white and the font size to 1.5rem. */
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+/* This is the CSS for the calculator. */
+.output .current-Operation {
+    color: white;
+    font-size: 2.5rem;
+}
